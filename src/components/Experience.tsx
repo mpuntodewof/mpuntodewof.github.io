@@ -2,25 +2,32 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    role: "Software Engineer",
-    company: "Banking & Financial Services",
-    period: "2022 — Present",
-    description: "Designed and maintained backend systems for BI-FAST transaction processing, handling 1000+ daily transactions with high reliability.",
-    highlights: ["BI-FAST Integration", "Transaction Processing", "Microservices Architecture", "40% Error Reduction"],
+    role: "IT Application Developer",
+    company: "PT Bluebird Group",
+    period: "Mar 2023 — Present",
+    description: "Designed scalable RESTful APIs for E-Timesheet and Talenta Receiver services integrating Portal Timesheet and Talenta HR with SAP. Engineered the Journaling Service for multi-gateway financial transaction recording. Optimized SQL queries and implemented fault-handling for high-volume systems.",
+    highlights: ["SAP Integration", "API Middleware", "Background Processing", "Agile/Scrum"],
   },
   {
-    role: "Full-Stack Developer",
-    company: "Enterprise HR & Finance",
-    period: "2020 — 2022",
-    description: "Built end-to-end enterprise applications integrating Talenta HR with SAP finance systems. Led API development and database optimization.",
-    highlights: ["SAP Integration", "REST APIs", "SQL Optimization", "Background Services"],
+    role: "Backend Developer",
+    company: "PT Bank Raya",
+    period: "Mar 2021 — Feb 2023",
+    description: "Designed and developed BI-FAST middleware APIs using .NET Core & SQL Server, supporting 1,000+ daily interbank transactions. Built and maintained a Card Management System for 5,000+ active cardholders with automated issuance and status tracking.",
+    highlights: ["BI-FAST Integration", "1,000+ Daily Transactions", "Card Management", ".NET Core"],
   },
   {
-    role: "Software Developer",
-    company: "Logistics & Real-Time Systems",
-    period: "2019 — 2020",
-    description: "Developed inventory management and logistics tracking systems with real-time data processing and reporting.",
-    highlights: ["Real-Time Systems", "Inventory Management", "Full-Stack Development", ".NET Core"],
+    role: "IT Application Developer",
+    company: "PT Bayer Indonesia",
+    period: "Apr 2019 — Feb 2021",
+    description: "Developed enterprise web applications using .NET C#, SQL Server, Laravel & Bootstrap. Optimized the Credit Management system reducing processing errors by 40%. Delivered 5+ internal applications and improved HR workflows with external vendor collaboration.",
+    highlights: ["40% Error Reduction", "5+ Enterprise Apps", "Credit Management", ".NET & Laravel"],
+  },
+  {
+    role: "Web Developer",
+    company: "Thortech Asia",
+    period: "Apr 2018 — Apr 2019",
+    description: "Built RESTful APIs for the Kirimkanai mobile app serving 1,000+ active users. Developed the Gapallan logistics and ship maintenance system, reducing manual data entry by ~40%. Improved admin tool efficiency by 25%.",
+    highlights: ["Full-Stack Development", "Mobile API", "Logistics Systems", "Laravel & MySQL"],
   },
 ];
 
@@ -40,7 +47,7 @@ const Experience = () => {
             Professional <span className="gradient-text">Experience</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A track record of delivering scalable, reliable systems across banking, enterprise, and logistics domains.
+            7+ years delivering scalable backend systems and enterprise applications across transportation, banking, pharmaceutical, and logistics domains.
           </p>
         </motion.div>
 
