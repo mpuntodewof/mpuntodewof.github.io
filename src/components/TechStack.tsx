@@ -7,18 +7,25 @@ const categories = [
     techs: [
       { name: ".NET Core", icon: "⚙️" },
       { name: "C#", icon: "🔷" },
-      { name: "REST APIs", icon: "🔌" },
+      { name: "ASP.NET", icon: "🌐" },
+      { name: "gRPC", icon: "📡" },
+      { name: "RESTful APIs", icon: "🔌" },
+      { name: "PHP / Laravel", icon: "🐘" },
       { name: "Microservices", icon: "🧩" },
+      { name: "API Gateway", icon: "🚪" },
+      { name: "Clean Architecture", icon: "🏗️" },
+      { name: "Background Services", icon: "⏳" },
     ],
   },
   {
     title: "Frontend",
     color: "accent",
     techs: [
-      { name: "React", icon: "⚛️" },
+      { name: "React.js", icon: "⚛️" },
       { name: "JavaScript", icon: "🟨" },
       { name: "Bootstrap", icon: "🅱️" },
-      { name: "HTML/CSS", icon: "🎨" },
+      { name: "Material UI", icon: "🎨" },
+      { name: "HTML / CSS", icon: "📄" },
     ],
   },
   {
@@ -27,18 +34,27 @@ const categories = [
     techs: [
       { name: "SQL Server", icon: "🗄️" },
       { name: "MySQL", icon: "🐬" },
+      { name: "Relational DB Design", icon: "📊" },
       { name: "Query Optimization", icon: "⚡" },
-      { name: "Data Modeling", icon: "📊" },
     ],
   },
   {
-    title: "Tools",
+    title: "Tools & DevOps",
     color: "accent",
     techs: [
+      { name: "Git / GitHub / GitLab", icon: "🔀" },
       { name: "Docker", icon: "🐳" },
-      { name: "Git", icon: "🔀" },
       { name: "Postman", icon: "📮" },
-      { name: "CI/CD", icon: "🔄" },
+      { name: "Jira", icon: "📋" },
+    ],
+  },
+  {
+    title: "Other",
+    color: "primary",
+    techs: [
+      { name: "Agile / Scrum", icon: "🔄" },
+      { name: "SAP Integration", icon: "🔗" },
+      { name: "API Documentation", icon: "📝" },
     ],
   },
 ];
