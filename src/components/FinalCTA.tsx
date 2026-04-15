@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
+import ContactFormDialog from "./ContactFormDialog";
 
 const FinalCTA = () => {
+  const [contactOpen, setContactOpen] = useState(false);
+
   return (
     <section id="contact" className="py-24 relative">
       <div className="container mx-auto px-6">
@@ -17,14 +21,14 @@ const FinalCTA = () => {
             <p className="text-muted-foreground mb-6">
               Whether it's a backend API, full-stack app, or system integration — let's build something that scales.
             </p>
-            <a
-              href="mailto:hello@example.com"
+            <button
+              onClick={() => setContactOpen(true)}
               className="inline-flex items-center gap-2 rounded-lg px-8 py-3.5 font-heading font-semibold text-primary-foreground transition-all hover:scale-105"
               style={{ backgroundImage: 'linear-gradient(135deg, hsl(239 84% 67%), hsl(263 70% 50%))' }}
             >
               Start a Project
               <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+            </button>
           </motion.div>
 
           {/* Recruiters */}
@@ -40,15 +44,19 @@ const FinalCTA = () => {
               I'm open to remote Software Engineer and Full-Stack roles. Let's discuss how I can contribute to your team.
             </p>
             <a
-              href="mailto:hello@example.com"
+              href="https://www.linkedin.com/in/muhammad-puntodewo-fadhillah-347169160/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 glass rounded-lg px-8 py-3.5 font-heading font-semibold text-foreground transition-all hover:bg-secondary hover:scale-105"
             >
               View Resume
-              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
             </a>
           </motion.div>
         </div>
       </div>
+
+      <ContactFormDialog open={contactOpen} onOpenChange={setContactOpen} />
     </section>
   );
 };
