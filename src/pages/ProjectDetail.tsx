@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import projects from "@/data/projects";
@@ -7,6 +8,10 @@ const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const project = projects.find((p) => p.slug === slug);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, [slug]);
 
   if (!project) {
     return (
@@ -77,7 +82,7 @@ const ProjectDetail = () => {
 
         {/* Back button */}
         <motion.button
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/", { state: { scrollTo: "projects" } })}
           className="absolute top-6 left-6 z-20 inline-flex items-center gap-2 glass rounded-lg px-4 py-2 text-sm font-heading font-semibold text-foreground transition-all hover:bg-secondary"
           initial={{ opacity: 0, x: -10 }}
           animate={{ opacity: 1, x: 0 }}
@@ -195,7 +200,9 @@ const ProjectDetail = () => {
 
               {/* Back to projects */}
               <button
-                onClick={() => navigate("/#projects")}
+                onClick={() => {
+                  navigate("/", { state: { scrollTo: "projects" } });
+                }}
                 className="w-full glass rounded-2xl p-4 flex items-center justify-center gap-2 font-heading font-semibold text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-all"
               >
                 <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
