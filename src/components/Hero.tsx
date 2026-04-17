@@ -1,10 +1,6 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import ContactFormDialog from "./ContactFormDialog";
 
 const Hero = () => {
-  const [contactOpen, setContactOpen] = useState(false);
-
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Animated background */}
@@ -75,26 +71,24 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <motion.button
-                onClick={() => setContactOpen(true)}
+              <motion.a
+                href="#contact"
                 className="inline-flex items-center justify-center gap-2 rounded-lg px-8 py-3.5 font-heading font-semibold text-primary-foreground transition-all hover:scale-105"
                 style={{ backgroundImage: 'linear-gradient(135deg, hsl(239 84% 67%), hsl(263 70% 50%))' }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Hire Me (Freelance)
+                Get in Touch
                 <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </motion.button>
+              </motion.a>
               <motion.a
-                href="https://www.linkedin.com/in/muhammad-puntodewo-fadhillah-347169160/"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#projects"
                 className="inline-flex items-center justify-center gap-2 glass rounded-lg px-8 py-3.5 font-heading font-semibold text-foreground transition-all hover:bg-secondary"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
-                View Resume
-                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                View My Work
+                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
               </motion.a>
             </div>
           </motion.div>
@@ -123,7 +117,6 @@ const Hero = () => {
         </div>
       </div>
 
-      <ContactFormDialog open={contactOpen} onOpenChange={setContactOpen} />
     </section>
   );
 };
